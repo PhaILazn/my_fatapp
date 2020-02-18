@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "424182333481",
+    "firebase_url": "https://myfatapp-32ddd.firebaseio.com",
+    "project_id": "myfatapp-32ddd",
+    "storage_bucket": "myfatapp-32ddd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:424182333481:android:81fe3430b90ff591225c38",
+        "android_client_info": {
+          "package_name": "com.JayCorps.my_fatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "424182333481-pfjcnv2mg9isnkmg21qb4uqmm0keq7bs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.JayCorps.my_fatapp",
+            "certificate_hash": "b685d990111d15f3ab2b8d637cbb531676b2a0fa"
+          }
+        },
+        {
+          "client_id": "424182333481-hjser889tnlq0antjmnclpgpriqkdmr0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAY613bJoMtno27oNz0fMJewZtiZr3HuME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "424182333481-hjser889tnlq0antjmnclpgpriqkdmr0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
