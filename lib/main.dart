@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:google_sign_in/google_sign_in.dart';
+import 'loginPage.dart';
 
 void main() => runApp(MaterialApp(
       theme:
@@ -44,10 +44,10 @@ class _SplashScreenState extends State<SplashScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                     CircleAvatar(
-                      backgroundColor: Colors.lightBlueAccent,
-                      radius: 50.0,
-                      child: Image.network("https://thumbs.gfycat.com/JovialDenseDunlin-size_restricted.gif")
-                    ),
+                        backgroundColor: Colors.lightBlueAccent,
+                        radius: 50.0,
+                        child: Image.network(
+                            "https://thumbs.gfycat.com/JovialDenseDunlin-size_restricted.gif")),
                     Padding(
                       padding: EdgeInsets.only(top: 20.0),
                     ),
@@ -112,68 +112,6 @@ class Page2 extends StatelessWidget {
       appBar: AppBar(),
       body: Center(
         child: Text('Page 2'),
-      ),
-    );
-  }
-}
-
-class LoginPage extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return _MyAppState();
-  }
-}
-
-class _MyAppState extends State<LoginPage> {
-  bool _isLoggedIn = false;
-
-  GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
-
-  _login() async{
-    try{
-      await _googleSignIn.signIn();
-      setState(() {
-        _isLoggedIn = true;
-      });
-    } catch (err){
-      print(err);
-    }
-  }
-
-  _logout(){
-    _googleSignIn.signOut();
-    setState(() {
-      _isLoggedIn = false;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return MaterialApp(
-      home: Scaffold(
-        body: Center(
-            child: _isLoggedIn
-                ? Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Image.network(_googleSignIn.currentUser.photoUrl, height: 50.0, width: 50.0,),
-                      Text(_googleSignIn.currentUser.displayName),
-                      Text(_googleSignIn.currentUser.email),
-                      OutlineButton( child: Text("Logout"), onPressed: (){
-                        _logout();
-                      },)
-                    ],
-                  )
-                : Center(
-                    child: OutlineButton(
-                      child: Text("Login with Google"),
-                      onPressed: () {
-                        _login();
-                      },
-                    ),
-                  )),
       ),
     );
   }
