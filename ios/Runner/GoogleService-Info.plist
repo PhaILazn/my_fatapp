@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>424182333481-r9fsit1bube7oal2v4q7td1utabp43jb.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.424182333481-r9fsit1bube7oal2v4q7td1utabp43jb</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>424182333481-pfjcnv2mg9isnkmg21qb4uqmm0keq7bs.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCqqJPOunQfNOQM2G72CKcmTfmC0w38n64</string>
+	<key>GCM_SENDER_ID</key>
+	<string>424182333481</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.JayCorps.myFatapp</string>
+	<key>PROJECT_ID</key>
+	<string>myfatapp-32ddd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>myfatapp-32ddd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:424182333481:ios:5973a37e4ce016e4225c38</string>
+	<key>DATABASE_URL</key>
+	<string>https://myfatapp-32ddd.firebaseio.com</string>
+</dict>
+</plist>

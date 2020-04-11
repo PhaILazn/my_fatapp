@@ -18,7 +18,6 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Timer(
         Duration(seconds: 3), () => Navigator.of(context).push(_createRoute()));
@@ -73,7 +72,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     padding: EdgeInsets.only(top: 50.0),
                   ),
                   Text(
-                      "  Application Unpacking... \nAll rights limited to Fat Co.",
+                      " \n Application Unpacking...",
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 25.0,
@@ -95,7 +94,6 @@ Route _createRoute() {
       var begin = Offset(0.0, .75);
       var end = Offset.zero;
       var curve = Curves.ease;
-
       var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
 
       return SlideTransition(
@@ -104,15 +102,4 @@ Route _createRoute() {
       );
     },
   );
-}
-
-class Page2 extends StatelessWidget {
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-        child: Text('Page 2'),
-      ),
-    );
-  }
 }
