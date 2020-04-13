@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'loginPage.dart';
+
+import 'package:my_fatapp/index.dart';
 
 void main() => runApp(MaterialApp(
       theme:
@@ -20,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 3), () => Navigator.of(context).push(_createRoute()));
+        Duration(seconds: 4), () => Navigator.of(context).pushReplacement(_createRoute()));
   }
 
   @override
@@ -89,7 +90,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
 Route _createRoute() {
   return PageRouteBuilder(
-    pageBuilder: (context, animation, secondaryAnimation) => LoginPage(),
+    pageBuilder: (context, animation, secondaryAnimation) => MyApp(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       var begin = Offset(0.0, .75);
       var end = Offset.zero;
