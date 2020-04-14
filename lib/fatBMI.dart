@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -131,7 +132,7 @@ class _BMICalcState extends State<BMICalc> {
               ),
             ),
             Padding(
-                padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
+                padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
                 child: RaisedButton(
                   color: Colors.black,
                   elevation: 20,
@@ -146,13 +147,13 @@ class _BMICalcState extends State<BMICalc> {
                       inches = inches + feet;
                       numResult = 703 * (weight / (inches * inches));
                       if (numResult > 30) {
-                        fatStr = "YOU ARE FAT";
+                        fatStr = "YOU ARE FAT AND OBESE!!\nI recommend checking the Overweight section to see what to eat.";
                       } else if (numResult < 29.9 && numResult > 25) {
-                        fatStr = "You're getting fat buddy";
+                        fatStr = "You're getting fat buddy.\nI recommend checking the Overweight section for foods.";
                       } else if (numResult < 24.9 && numResult > 18.5) {
-                        fatStr = "You're perfect in every way";
+                        fatStr = "You're perfect in every way.\nCheck the normal tab to see what to continue eating.";
                       } else if (numResult < 18.5) {
-                        fatStr = "Yooo, you need to eat a munchie meal";
+                        fatStr = "Yooo, you need to eat a munchie meal. Period.";
                       }
                     });
                   },
@@ -162,7 +163,16 @@ class _BMICalcState extends State<BMICalc> {
                         fontWeight: FontWeight.bold, color: Colors.white),
                   ),
                 )),
-                Text(fatStr),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(0, 35, 0, 0),
+                  child: AutoSizeText(
+                    fatStr,
+                    maxLines: 4,
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
+                  ),
+                )
           ],
         ));
   }
