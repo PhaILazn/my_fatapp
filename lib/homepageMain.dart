@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:my_fatapp/fatBMI.dart';
+import 'package:my_fatapp/mealRec.dart';
 import 'package:my_fatapp/services/authentication.dart';
 import 'services/authentication.dart';
 
@@ -21,7 +22,6 @@ class _HomePageState extends State<HomePage> {
     try {
       await widget.auth.signOut();
       widget.logoutCallback();
-      Navigator.popUntil(context, ModalRoute.withName("/"));
     } catch (e) {
       print(e);
     }
@@ -30,6 +30,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.purple,
@@ -69,7 +70,10 @@ class _HomePageState extends State<HomePage> {
                   }),
               ListTile(
                 title: Text('Recommeded Meal Plans'),
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                        builder: (BuildContext context) => MealRecommendations()));
+                },
               ),
             ],
           ),
@@ -85,7 +89,6 @@ class _HomePageState extends State<HomePage> {
             child: AutoSizeText("This is the Homepage",
               style: new TextStyle(
                 fontSize: 50,
-
               ),
               maxLines: 1
             ),

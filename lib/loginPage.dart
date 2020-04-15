@@ -143,7 +143,7 @@ class _LoginPageState extends State<LoginPage> {
         _errorMessage,
         style: TextStyle(
             fontSize: 13.0,
-            color: Colors.red,
+            color: Colors.black,
             height: 1.0,
             fontWeight: FontWeight.w300),
       );

@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:my_fatapp/mealRec.dart';
 
 class BMICalc extends StatefulWidget {
   @override
@@ -50,7 +51,6 @@ class _BMICalcState extends State<BMICalc> {
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.of(context).pop();
-                  Navigator.of(context).pop();
                 },
               ),
               ListTile(
@@ -60,7 +60,12 @@ class _BMICalcState extends State<BMICalc> {
                   }),
               ListTile(
                 title: Text('Recommeded Meal Plans'),
-                onTap: () {},
+                onTap: () {
+                   Navigator.of(context).pop();
+                    Navigator.of(context).pop();
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (BuildContext context) => MealRecommendations()));
+                },
               ),
             ],
           ),
