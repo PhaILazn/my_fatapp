@@ -59,7 +59,6 @@ class _HomePageState extends State<HomePage> {
               ListTile(
                 title: Text('Home'),
                 onTap: () {
-                  
                 }
               ),
               ListTile(
@@ -86,12 +85,16 @@ class _HomePageState extends State<HomePage> {
                   end: Alignment.bottomLeft,
                   colors: [Colors.pink, Colors.purple]),
             ),
-            child: AutoSizeText("This is the Homepage",
-              style: new TextStyle(
-                fontSize: 50,
+            child: 
+            Column(children: <Widget>[
+              SizedBox(
+                height: 500,
+                width: 500,
+                child: Image.asset('assets/icon.jpg')
               ),
-              maxLines: 1
-            ),
+              AutoSizeText("This app is designed for people who do not work out on a daily basis", maxLines: 1,textAlign: TextAlign.center,)
+            ],)
+            
           ) 
         )
       );

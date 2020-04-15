@@ -25,9 +25,13 @@ dependencies:
   cloud_firestore: ^0.13.4+2
   firebase_storage: ^3.1.5
   firebase_database:
-  shared_preferences:
   auto_size_text: ^2.1.0
+  flutter_launcher_icons:
 
+flutter_icons:
+  image_path: "assets/icon.jpg"
+  android: true
+  ios: true
 
   
 dev_dependencies:

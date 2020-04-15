@@ -1,11 +1,5 @@
 import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
-import '../homepageMain.dart';
-import '../loginpage.dart';
-
 
 abstract class BaseAuth {
   Future<String> signIn(String email, String password);
@@ -55,11 +49,5 @@ class Auth implements BaseAuth {
     FirebaseUser user = await _firebaseAuth.currentUser();
     return user.isEmailVerified;
   }
-  Future<void> main() async {
-      WidgetsFlutterBinding.ensureInitialized();
-      SharedPreferences prefs = await SharedPreferences.getInstance();
-      var email = prefs.getString('email');
-      print(email);
-      runApp(MaterialApp(home: email == null ? LoginPage() : HomePage()));
-    }
+  
 }
